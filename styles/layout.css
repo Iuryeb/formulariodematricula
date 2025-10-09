@@ -1,0 +1,26 @@
+#app{
+    display:grid ;
+    grid-template-columns: 51.25% 48.75%;/* para colocar as divs uma do lado da outra em um em porcentagem, para chegar nessa porcentagem , foi pego o valor de uma div width no caso (656*100)/1280, 1280 é a soma das duas divs em largura */
+
+    height: 100vh;
+    overflow: hidden;/* nesse caso a base rolagem não vai existir para página toda , mas como foi aplicado entre outra div dentro do app , apenas a div aplicada terá barra de rolagem.*/
+    
+}
+main{
+    overflow: auto;/*para colocar uma rolagem apenas no meio da tela , para o lado que irá se mexer.*/
+    padding: 4rem; /* chegou nesse resultado de 4rem , porque no figma o espaçamento de padding é de 64, para fazer a conta de px para rem , é do dividir o pixel 64 , e dividir por 16 que é um rem, resultado 4 */
+
+    & .main-container{
+        max-width: 33rem;/* a div main container vai ter uma largura maxima de 33rem*/
+        margin-left: auto;/* vai preencher um espaço invisivel na esquerda , sempre se adaptando ao tamanho da tela*/
+
+    }/* esse comando equivale a main .main-container*/
+}
+aside{
+    padding: 4rem;
+    background-color: var(--surface-secondary);
+
+    & .aside-main{
+        max-width: 31rem;
+    }
+}

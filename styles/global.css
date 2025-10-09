@@ -1,3 +1,9 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 :root{
     --font-family:'Popins', sans-serif;
     --text:400 1rem/1.5 var(--font-family);
@@ -15,4 +21,7 @@
     --stroke-highlight: #f3541c;
     --semantic-error: #dc2626;
 
+}
+body{
+    overflow: hidden;/*usado para tirar rolagem da tela e transbordamento*/
 }
