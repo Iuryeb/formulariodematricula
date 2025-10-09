@@ -15,12 +15,44 @@ main{
         margin-left: auto;/* vai preencher um espaço invisivel na esquerda , sempre se adaptando ao tamanho da tela*/
 
     }/* esse comando equivale a main .main-container*/
+    
+    & .back{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-bottom: 1.5rem;
+
+    }
+    
+    & h1 {
+        font: 600 1.5rem/1.25 var(--font-family); /* o número 600 é para semibold */
+        margin-bottom: .5rem;
+
+    }
+    
+    
 }
 aside{
     padding: 4rem;
     background-color: var(--surface-secondary);
 
-    & .aside-main{
+    & .aside-container{
         max-width: 31rem;
+
+        & > img{/*& = aside-container. >= dentro da variavel. img= tem uma imagem dentro para ser editada. */
+            margin-top: 2rem;
+
+        }
+    }
+
+    & h2{
+        font: 600 2.5rem/1.25 var(--font-family);
+        margin-bottom: .5rem;
+
+        & span{
+            color: var(--text-highlight);
+        }
+
+
     }
 }
