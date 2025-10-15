@@ -14,3 +14,8 @@ legend{
     font: 600 1rem/1.25 var(--font-family);
     margin-bottom: 1.5rem;
 }
+
+fieldset + fieldset{ /*se lê "quando tiver fieldset atrás de fieldset " ganha aquela estilização */
+    margin-top: 3rem;
+
+}

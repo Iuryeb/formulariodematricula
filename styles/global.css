@@ -16,7 +16,8 @@
 
     --surface-primary: #ffffff;
     --surface-secondary: #fee7d6;
-
+    --surface-disabled: #e7e5e4;
+    
     --stroke-default: #d6d3d1;
     --stroke-highlight: #f3541c;
     --semantic-error: #dc2626;
@@ -33,4 +34,13 @@ h1, h2{
 img{
     max-width: 100%; /* variável global , para manter 100% do tamanho dela conforme setado. */
     height: auto;
+}
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-2{
+    flex: 2;
 }
