@@ -64,4 +64,30 @@ input {
 
         color: var(--text-primary);
     }
+
+    &:invalid{/* invalid comunica com o require, se o require não estiver preenchido , ele usa essa estilização para dar atenção*/
+        border: 0.125rem solid var(--semantic-error);
+    }
+    & + small{/* input que tem o small como irmão*/
+        font: var(--text-sm);
+        color: #78716c;
+
+        display: inline-block; /* se mantem inline , mas com propriedades block */
+        margin-top: .25rem;
+    }
+
+    &[required] + .error{/* se meu input tiver required e ao lado dele tiver um error , ele irá executar essa ação de estilizaçã*/
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        
+        font: var(--text-sm);
+        color: var( --semantic-error);
+        
+        margin-top: .25rem;
+    }
+    &:not(:focus):valid + .error{/* quando tirar do foco , ele some o vermelho em volta, verifica se o input está valido , se estiver tira o erro da tela */
+        display: none;
+
+    }
 }
