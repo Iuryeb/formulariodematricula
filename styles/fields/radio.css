@@ -1,0 +1,56 @@
+label + .radio-wrapper{ /* sempre que tiver um label seguido de uma radio-wrapper ganha essa estilização*/
+    margin-top: 1rem;
+
+}
+.radio-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    /*auto-fit ele vai fazer automatico numero de colunas*/
+    /*minmax, e o minimo que essa coluna vai ter e o max é  o maximo */
+    gap: 1rem;
+
+}
+.radio-inner{
+    border:  1px solid var(--stroke-default);
+    border-radius: .5rem;
+
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    position: relative;
+
+    padding: 2rem .5rem .5rem;
+    & input,
+    & input:focus,
+    & input:hover{
+        all:unset;
+        position: absolute;
+        inset: 0;
+    }
+    .radio-image{
+        background-image: url(../../assests/icons/radio-default.svg);
+
+        width: 1.5rem;
+        height: 1.5rem;
+
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+    &:hover, &:focus-within{
+        border: 1px solid var(--stroke-highlight);
+
+        & .radio-image{
+            background-image: url(../../assests/icons/radio-hover.svg);
+        }
+    }
+    &:has(:checked){/*quando tiver selecionado*/
+        border: 2px solid var(--stroke-highlight);
+
+        & .radio-image{
+            background-image:url(../../assests/icons/radio-checked.svg);
+        }
+
+    }
+}
